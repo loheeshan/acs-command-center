@@ -1,0 +1,22 @@
+# dependencies & build output
+node_modules
+dist
+*.local
+.vercel
+
+# generated at build time (npm run build:runtime)
+public/sandbox-runtime.js
+
+# university source materials — copyrighted, large; kept locally only
+extracted-materials/
+/*.zip
+/*.pptx
+/*.pdf
+/*.docx
+/*.7z
+
+# misc
+.tmp-*/
+*.log
+.DS_Store
+Thumbs.db

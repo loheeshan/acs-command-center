@@ -1,0 +1,55 @@
+{
+  "name": "acs-command-center",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "build:runtime": "node scripts/build-sandbox-runtime.mjs",
+    "predev": "npm run build:runtime",
+    "dev": "vite",
+    "prebuild": "npm run build:runtime",
+    "build": "tsc -b && vite build",
+    "typecheck": "tsc -b",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:sandbox": "vitest run src/tests/sandboxRun.slow.test.ts --no-file-parallelism"
+  },
+  "dependencies": {
+    "@hookform/resolvers": "^7.0.7",
+    "@monaco-editor/react": "^4.7.0",
+    "@tanstack/react-query": "^5.108.1",
+    "@xyflow/react": "^13.0.2",
+    "lucide-react": "^1.77.0",
+    "monaco-editor": "^0.57.0",
+    "prism-react-renderer": "^2.4.1",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "react-hook-form": "^7.92.0",
+    "react-markdown": "^10.1.0",
+    "react-router-dom": "^7.18.6",
+    "remark-gfm": "^4.0.1",
+    "sucrase": "^3.35.1",
+    "zod": "^4.6.7",
+    "zustand": "^5.1.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.3.5",
+    "@testing-library/jest-dom": "^8.0.0",
+    "@testing-library/react": "^16.3.3",
+    "@testing-library/user-event": "^14.6.13",
+    "@types/node": "^26.6.6",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.3.0",
+    "esbuild": "^0.28.2",
+    "jsdom": "^29.1.1",
+    "tailwindcss": "^4.3.5",
+    "typescript": "~6.0.2",
+    "vite": "^8.3.8",
+    "vitest": "^5.1.1"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
